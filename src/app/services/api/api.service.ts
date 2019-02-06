@@ -12,8 +12,8 @@ export class ApiService {
 
   createUser(uid,data){
 
- let a=this.afs.doc('user/' +uid).set(data);
- return a;
+ return this.afs.doc('user/' +uid).set(data);
+
   }
   readUsers(){
     return this.afs.collection('user').snapshotChanges();
